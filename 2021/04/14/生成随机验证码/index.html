@@ -25,11 +25,12 @@
 
   
 
-<link rel="canonical" href="http://17538235451.github.io/friends/">
+<link rel="canonical" href="http://17538235451.github.io/2021/04/14/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%AA%8C%E8%AF%81%E7%A0%81/">
 
 
 
-  <title>friends |
+  <title>
+生成随机验证码 |
 Yume Shoka = Jay</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -57,8 +58,19 @@ Yume Shoka = Jay</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">friends
+  <h1 itemprop="name headline">生成随机验证码
   </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-04-14 14:51:56">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-04-14T14:51:56+08:00">2021-04-14</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -88,12 +100,12 @@ Yume Shoka = Jay</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007Hpd1aly8hf02uxvwb4j318g0p0gpg.jpg"></li>
-          <li class="item" data-background-image="https://i.loli.net/2020/10/30/Y1CBXqgeokEs457.jpg"></li>
-          <li class="item" data-background-image="https://i.loli.net/2020/10/30/HKyzSd7NI3mlBpt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007Hpd1aly8hf02r4233bj315o0s5133.jpg"></li>
-          <li class="item" data-background-image="https://i.loli.net/2020/10/30/Z5W6r2BSoiThHG1.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/007Hpd1aly8hf02unpmujj31hc0u0ju8.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007Hpd1aly8hf02q624v4j30xc0ir76t.jpg"></li>
           <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007Hpd1aly8hf02v4e0fmj31hc0u0dkb.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007Hpd1aly8hf02utixeaj30k00b9jtp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007Hpd1aly8hf02r4233bj315o0s5133.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/007Hpd1aly8hf02uquo6mj31hc0swtbz.jpg"></li>
         </ul>
       </div>
     </header>
@@ -114,9 +126,15 @@ Yume Shoka = Jay</title>
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="page wrap">
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="http://17538235451.github.io/friends/index.html">
+  <link itemprop="mainEntityOfPage" href="http://17538235451.github.io/2021/04/14/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%AA%8C%E8%AF%81%E7%A0%81/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -131,9 +149,12 @@ Yume Shoka = Jay</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p><span class="exturl" data-url="aHR0cHM6Ly92M24udG9wLw==">王杰</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly94M2NwLmNuLw==">薛鑫鹏</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9yZW5qdW5kYS5yZW4v">任俊达</span></p>
+    <h1 id="生成随机验证码"><a class="anchor" href="#生成随机验证码">#</a> 生成随机验证码</h1>
+<h3 id="一导包"><a class="anchor" href="#一导包">#</a> 一。导包</h3>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">from io import BytesIO</span><br><span class="line">from captcha.image import ImageCaptcha</span><br></pre></td></tr></table></figure></p>
+<h3 id="二视图函数"><a class="anchor" href="#二视图函数">#</a> 二。视图函数</h3>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">def random_code(num=4):</span><br><span class="line">    # num 是生成随机的数量 默认为4</span><br><span class="line">    str__a_z = [chr(num) for num in range(97, 123)]</span><br><span class="line">    str__A_Z = [chr(num) for num in range(65, 91)]</span><br><span class="line">    num_0_9 = [str(num) for num in range(0, 10)]</span><br><span class="line">    return &#x27;&#x27;.join(random.sample(str__a_z + str__A_Z + num_0_9, num))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def make_verify_image(code_str, uuid=None):</span><br><span class="line">    # 保存验证码到redis中,并且设置过期时间</span><br><span class="line">    r.set(uuid, code_str, 60)</span><br><span class="line">    # 生成验证码图片</span><br><span class="line">    img = ImageCaptcha().generate_image(code_str)</span><br><span class="line">    # 图片不会永久存储，只需要在内存中存储即可</span><br><span class="line">    # 把Image对象写入到IO流中</span><br><span class="line">    out = BytesIO()  # 文件流对象打开在内存中</span><br><span class="line">    img.save(out, &#x27;jpeg&#x27;)</span><br><span class="line">    return out.getvalue()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Generateimg(APIView):</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    返回前端验证码图片</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line">    def get(self, request):</span><br><span class="line">        # 2.创建随机数</span><br><span class="line">        code = random_code()</span><br><span class="line">        # 3.生成图片</span><br><span class="line">        image = make_verify_image(code)</span><br><span class="line">        # 4.返回图片</span><br><span class="line">        return HttpResponse(image, content_type=&#x27;image/jpeg&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h3 id="三然后就成功了redis存储只有60秒时间"><a class="anchor" href="#三然后就成功了redis存储只有60秒时间">#</a> 三。然后就成功了，redis 存储只有 60 秒时间</h3>
 
   </div>
 
@@ -145,7 +166,7 @@ Yume Shoka = Jay</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2021-04-14 20:03:30" itemprop="dateModified" datetime="2021-04-14T20:03:30+08:00">2021-04-14</time>
+    <time title="Modified: 2021-04-14 14:52:27" itemprop="dateModified" datetime="2021-04-14T14:52:27+08:00">2021-04-14</time>
   </span>
 </div>
 
@@ -181,7 +202,7 @@ Yume Shoka = Jay</title>
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="http://17538235451.github.io/friends/index.html" title="friends">http://17538235451.github.io/friends/index.html</a>
+    <a href="http://17538235451.github.io/2021/04/14/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%AA%8C%E8%AF%81%E7%A0%81/" title="生成随机验证码">http://17538235451.github.io/2021/04/14/生成随机验证码/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -195,6 +216,31 @@ Yume Shoka = Jay</title>
 
   </div>
   
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/04/14/Vue%E5%85%AC%E5%85%B1%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;large&#x2F;007Hpd1aly8hf02uxvwb4j318g0p0gpg.jpg" title="Vue公共组件封装">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Vue公共组件封装</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2021/04/14/hexo%E8%A7%A3%E5%86%B3%E6%96%87%E7%AB%A0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;10&#x2F;30&#x2F;Z5W6r2BSoiThHG1.jpg" title="hexo解决文章图片不显示问题">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>hexo解决文章图片不显示问题</h3>
+  </a>
+
+    </div>
+</div>
+
+  
   <div class="wrap" id="comments"></div>
 
 
@@ -207,6 +253,7 @@ Yume Shoka = Jay</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%AA%8C%E8%AF%81%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text"> 生成随机验证码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%AF%BC%E5%8C%85"><span class="toc-number">1.0.1.</span> <span class="toc-text"> 一。导包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E8%A7%86%E5%9B%BE%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.2.</span> <span class="toc-text"> 二。视图函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%84%B6%E5%90%8E%E5%B0%B1%E6%88%90%E5%8A%9F%E4%BA%86redis%E5%AD%98%E5%82%A8%E5%8F%AA%E6%9C%8960%E7%A7%92%E6%97%B6%E9%97%B4"><span class="toc-number">1.0.3.</span> <span class="toc-text"> 三。然后就成功了，redis 存储只有 60 秒时间</span></a></li></ol></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -285,10 +332,12 @@ Yume Shoka = Jay</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2021/04/14/Vue%E5%85%AC%E5%85%B1%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2021/04/14/hexo%E8%A7%A3%E5%86%B3%E6%96%87%E7%AB%A0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -321,24 +370,6 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/15/%E5%88%86%E5%B8%83%E5%BC%8F%E8%87%AA%E5%A2%9EID%E4%B9%8B%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95/" title="分布式自增ID之雪花算法">分布式自增ID之雪花算法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/04/14/Django%E7%BB%A7%E6%89%BFModelViewSet%E8%A7%86%E5%9B%BE%E6%93%8D%E4%BD%9C/" title="Django继承ModelViewSet视图操作">Django继承ModelViewSet视图操作</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2021/04/15/Vue%E8%AF%B7%E6%B1%82%E8%B7%AF%E7%94%B1%E9%92%A9%E5%AD%90/" title="Vue请求路由钩子">Vue请求路由钩子</a></span>
   </li>
 
@@ -348,7 +379,7 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/14/HTTP-FLV%E7%9B%B4%E6%92%AD%E6%90%AD%E5%BB%BA/" title="HTTP-FLV直播搭建">HTTP-FLV直播搭建</a></span>
+    <span><a href="/2021/04/14/%E6%88%91%E7%9A%84%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80S20%E8%B5%9B%E5%AD%A3/" title="我的王者荣耀S20赛季">我的王者荣耀S20赛季</a></span>
   </li>
 
       
@@ -366,7 +397,16 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/14/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%AA%8C%E8%AF%81%E7%A0%81/" title="生成随机验证码">生成随机验证码</a></span>
+    <span><a href="/2021/04/14/Vue%E5%85%AC%E5%85%B1%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" title="Vue公共组件封装">Vue公共组件封装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/14/Django%E7%BB%A7%E6%89%BFModelViewSet%E8%A7%86%E5%9B%BE%E6%93%8D%E4%BD%9C/" title="Django继承ModelViewSet视图操作">Django继承ModelViewSet视图操作</a></span>
   </li>
 
       
@@ -384,7 +424,7 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/14/Vue%E5%85%AC%E5%85%B1%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" title="Vue公共组件封装">Vue公共组件封装</a></span>
+    <span><a href="/2021/04/14/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%AA%8C%E8%AF%81%E7%A0%81/" title="生成随机验证码">生成随机验证码</a></span>
   </li>
 
       
@@ -393,7 +433,16 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/14/%E6%88%91%E7%9A%84%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80S20%E8%B5%9B%E5%AD%A3/" title="我的王者荣耀S20赛季">我的王者荣耀S20赛季</a></span>
+    <span><a href="/2021/04/15/%E5%88%86%E5%B8%83%E5%BC%8F%E8%87%AA%E5%A2%9EID%E4%B9%8B%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95/" title="分布式自增ID之雪花算法">分布式自增ID之雪花算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/14/HTTP-FLV%E7%9B%B4%E6%92%AD%E6%90%AD%E5%BB%BA/" title="HTTP-FLV直播搭建">HTTP-FLV直播搭建</a></span>
   </li>
 
   </ul>
@@ -424,7 +473,7 @@ Yume Shoka = Jay</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'friends/',
+    path: '2021/04/14/生成随机验证码/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"

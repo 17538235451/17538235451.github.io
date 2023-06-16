@@ -25,11 +25,12 @@
 
   
 
-<link rel="canonical" href="http://17538235451.github.io/categories/">
+<link rel="canonical" href="http://17538235451.github.io/2020/08/11/%E7%AE%97%E6%B3%95%E9%A2%98/">
 
 
 
-  <title>AllCategory |
+  <title>
+算法题 |
 Yume Shoka = Jay</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -57,8 +58,19 @@ Yume Shoka = Jay</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">AllCategory
+  <h1 itemprop="name headline">算法题
   </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2020-08-11 15:18:12">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-08-11T15:18:12+08:00">2020-08-11</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -88,12 +100,12 @@ Yume Shoka = Jay</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.loli.net/2020/10/30/Z5W6r2BSoiThHG1.jpg"></li>
-          <li class="item" data-background-image="https://i.loli.net/2020/10/30/qAMYEFXxJcKRsiG.gif"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/007Hpd1aly8hf02r4233bj315o0s5133.jpg"></li>
-          <li class="item" data-background-image="https://i.loli.net/2020/10/30/rjdhcSgEN8COBPA.jpg"></li>
           <li class="item" data-background-image="https://i.loli.net/2020/10/30/Y1CBXqgeokEs457.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007Hpd1aly8hf02utixeaj30k00b9jtp.jpg"></li>
+          <li class="item" data-background-image="https://i.loli.net/2020/10/30/rjdhcSgEN8COBPA.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/007Hpd1aly8hf02uq134lj31hc0u0jxn.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/007Hpd1aly8hf02unpmujj31hc0u0ju8.jpg"></li>
+          <li class="item" data-background-image="https://i.loli.net/2020/10/30/qAMYEFXxJcKRsiG.gif"></li>
+          <li class="item" data-background-image="https://i.loli.net/2020/10/30/Z5W6r2BSoiThHG1.jpg"></li>
         </ul>
       </div>
     </header>
@@ -114,10 +126,115 @@ Yume Shoka = Jay</title>
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="collapse wrap">
-    <h2 class="item title"><a href="/">Home</a> <small>/</small> No categories</h2>
+  <div class="article wrap">
     
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://17538235451.github.io/2020/08/11/%E7%AE%97%E6%B3%95%E9%A2%98/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="张伟杰">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Jay">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h3 id="二分查找"><a class="anchor" href="#二分查找">#</a> 二分查找</h3>
+<p>二分查找算法，也叫折半查找算法</p>
+<p>二分查找针对的是一个有序的数据集合，每次都通过区间的中间元素对比，将待查找的区间缩小为之前的一半</p>
+<p>知道找到要查找的元素，或者区间缩小为 0</p>
+<p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">_<span class="built_in">list</span>=<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>))</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bin_search</span>(<span class="params">_<span class="built_in">list</span>,val</span>)</span><br><span class="line">	low=<span class="number">0</span></span><br><span class="line">    high=<span class="built_in">len</span>(_<span class="built_in">list</span>)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> low&lt;=high:</span><br><span class="line">        mid=(low+high)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> _<span class="built_in">list</span>[mid]==val:</span><br><span class="line">            returun mid</span><br><span class="line">        <span class="keyword">elif</span> _<span class="built_in">list</span>[mid]&lt;val:</span><br><span class="line">            <span class="keyword">return</span> low=mid+<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            retuen low=mid-<span class="number">1</span></span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">l=bin_search(_<span class="built_in">list</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(l)</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="选择排序"><a class="anchor" href="#选择排序">#</a> 选择排序</h3>
+
   </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-06-14 17:18:05" itemprop="dateModified" datetime="2023-06-14T17:18:05+08:00">2023-06-14</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="张伟杰 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="张伟杰 Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="张伟杰 PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>张伟杰 <i class="ic i-at"><em>@</em></i>Jay
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://17538235451.github.io/2020/08/11/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">http://17538235451.github.io/2020/08/11/算法题/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2021/04/14/HTTP-FLV%E7%9B%B4%E6%92%AD%E6%90%AD%E5%BB%BA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;10&#x2F;30&#x2F;qAMYEFXxJcKRsiG.gif" title="HTTP-FLV直播搭建">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>HTTP-FLV直播搭建</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
 
         </div>
         <div id="sidebar">
@@ -128,6 +245,7 @@ Yume Shoka = Jay</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-number">1.</span> <span class="toc-text"> 二分查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="toc-number">2.</span> <span class="toc-text"> 选择排序</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -233,25 +351,7 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/14/Django%E7%BB%A7%E6%89%BFModelViewSet%E8%A7%86%E5%9B%BE%E6%93%8D%E4%BD%9C/" title="Django继承ModelViewSet视图操作">Django继承ModelViewSet视图操作</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/04/14/HTTP-FLV%E7%9B%B4%E6%92%AD%E6%90%AD%E5%BB%BA/" title="HTTP-FLV直播搭建">HTTP-FLV直播搭建</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/04/14/%E6%88%91%E7%9A%84%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80S20%E8%B5%9B%E5%AD%A3/" title="我的王者荣耀S20赛季">我的王者荣耀S20赛季</a></span>
+    <span><a href="/2021/04/14/hexo%E8%A7%A3%E5%86%B3%E6%96%87%E7%AB%A0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" title="hexo解决文章图片不显示问题">hexo解决文章图片不显示问题</a></span>
   </li>
 
       
@@ -269,7 +369,7 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/08/11/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">算法题</a></span>
+    <span><a href="/2021/04/15/Vue%E8%AF%B7%E6%B1%82%E8%B7%AF%E7%94%B1%E9%92%A9%E5%AD%90/" title="Vue请求路由钩子">Vue请求路由钩子</a></span>
   </li>
 
       
@@ -278,7 +378,16 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/14/hexo%E8%A7%A3%E5%86%B3%E6%96%87%E7%AB%A0%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" title="hexo解决文章图片不显示问题">hexo解决文章图片不显示问题</a></span>
+    <span><a href="/2021/04/14/Django%E7%BB%A7%E6%89%BFModelViewSet%E8%A7%86%E5%9B%BE%E6%93%8D%E4%BD%9C/" title="Django继承ModelViewSet视图操作">Django继承ModelViewSet视图操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/08/11/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">算法题</a></span>
   </li>
 
       
@@ -296,6 +405,24 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2021/04/15/%E5%88%86%E5%B8%83%E5%BC%8F%E8%87%AA%E5%A2%9EID%E4%B9%8B%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95/" title="分布式自增ID之雪花算法">分布式自增ID之雪花算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/14/%E6%88%91%E7%9A%84%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80S20%E8%B5%9B%E5%AD%A3/" title="我的王者荣耀S20赛季">我的王者荣耀S20赛季</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2021/04/14/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%AA%8C%E8%AF%81%E7%A0%81/" title="生成随机验证码">生成随机验证码</a></span>
   </li>
 
@@ -305,16 +432,7 @@ Yume Shoka = Jay</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/15/Vue%E8%AF%B7%E6%B1%82%E8%B7%AF%E7%94%B1%E9%92%A9%E5%AD%90/" title="Vue请求路由钩子">Vue请求路由钩子</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/04/14/Vue%E5%85%AC%E5%85%B1%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" title="Vue公共组件封装">Vue公共组件封装</a></span>
+    <span><a href="/2021/04/14/HTTP-FLV%E7%9B%B4%E6%92%AD%E6%90%AD%E5%BB%BA/" title="HTTP-FLV直播搭建">HTTP-FLV直播搭建</a></span>
   </li>
 
   </ul>
@@ -345,7 +463,7 @@ Yume Shoka = Jay</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'categories/',
+    path: '2020/08/11/算法题/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"
